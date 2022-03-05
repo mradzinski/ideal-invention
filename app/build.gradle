@@ -1,0 +1,65 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk rootProject.ext.compileSdk
+
+    defaultConfig {
+        applicationId "com.mradzinski.reddit"
+        minSdk rootProject.ext.minSdk
+        targetSdk rootProject.ext.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Have we had other build types we should've defined this on a per-type basis.
+        buildConfigField 'String', 'BASE_URL', BASE_URL
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+}
+
+dependencies {
+
+    implementation rootProject.ext.androidxCore
+    implementation rootProject.ext.appCompat
+    implementation rootProject.ext.constraintLayout
+    implementation rootProject.ext.fragment
+    implementation rootProject.ext.glide
+    implementation rootProject.ext.koinCore
+    implementation rootProject.ext.koinAndroid
+    implementation rootProject.ext.lifecycleRuntime
+    implementation rootProject.ext.lifecycleViewModel
+    implementation rootProject.ext.material
+    implementation rootProject.ext.multidex
+    implementation rootProject.ext.okHttp
+    implementation rootProject.ext.recyclerView
+    implementation rootProject.ext.retrofit
+    implementation rootProject.ext.retrofitMoshi
+
+    testImplementation 'junit:junit:4.13.2'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

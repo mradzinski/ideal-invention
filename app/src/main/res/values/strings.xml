@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Probable Lamp</string>
+    <string name="home_error_message">There\'s been an error requesting the characters. Please try again</string>
+    <string name="home_error_retry">Retry</string>
+</resources>

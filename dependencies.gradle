@@ -1,0 +1,40 @@
+
+ext {
+    minSdk = 21
+    targetSdk = 31
+    compileSdk = 31
+
+    // Versions:
+
+    androidx_core_version = '1.7.0'
+    androidx_appcompat_version = '1.4.1'
+    constraint_layout_version = '2.1.3'
+    fragment_version = '1.4.1'
+    glide_version = '4.13.0'
+    koin_version = '3.1.5'
+    lifecycle_version = '2.4.1'
+    material_version = '1.5.0'
+    multidex_version = '2.0.1'
+    okhttp_version = '4.9.3'
+    recyclerview_version = '1.2.1'
+    retrofit_version = '2.9.0'
+
+    // --------
+
+    androidxCore = "androidx.core:core-ktx:$androidx_core_version"
+    appCompat = "androidx.appcompat:appcompat:$androidx_appcompat_version"
+    constraintLayout = "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    fragment = "androidx.fragment:fragment-ktx:$fragment_version"
+    glide = "com.github.bumptech.glide:glide:$glide_version"
+    koinCore = "io.insert-koin:koin-core:$koin_version"
+    koinAndroid = "io.insert-koin:koin-android:$koin_version"
+    lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    material = "com.google.android.material:material:$material_version"
+    multidex = "androidx.multidex:multidex:$multidex_version"
+    okHttp = "com.squareup.okhttp3:okhttp:$okhttp_version"
+    recyclerView = "androidx.recyclerview:recyclerview:$recyclerview_version"
+    retrofit = "com.squareup.retrofit2:retrofit:$retrofit_version"
+    retrofitMoshi = "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+
+}
